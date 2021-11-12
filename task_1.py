@@ -1,10 +1,11 @@
-text = input('Write text: ')
-sign = input('Write sign: ')
-text = text.lower()
+if __name__ == '__main__':
+    text = input('Write text: ')
+    sign = input('Write sign: ')
+    text = text.lower()
 
-textArr = text.split()
+    text_arr = text.split()
 
-for word in textArr:
-    for ch in word:
-        if ch == sign:
-            print(word)
+    for word in text_arr:
+        for ch in word:
+            if ch == sign:
+                print(word)

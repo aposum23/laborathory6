@@ -1,19 +1,20 @@
-def findChar(str, ch, i):
+def find_char(str, chr, i):
     for ind, elem in enumerate(str):
-        if elem == ch and ind != i:
+        if elem == chr and ind != i:
             return True
     return False
 
 
-words = input('Write two words: ')
-words = words.replace(' ', '')
-words = words.lower()
-resChars = ''
+if __name__ == '__main__':
+    words = input('Write two words: ')
+    words = words.replace(' ', '')
+    words = words.lower()
+    res_chars = ''
 
-for ind, ch in enumerate(words):
-    if findChar(words, ch, ind):
-        continue
-    else:
-        resChars = resChars + ch + ' '
+    for ind, ch in enumerate(words):
+        if find_char(words, ch, ind):
+            continue
+        else:
+            res_chars = res_chars + ch + ' '
 
-print(f'Result: {resChars}')
+    print(f'Result: {res_chars}')
